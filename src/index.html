@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./sass/utils/main.scss" />
+    <link rel="stylesheet" href="./sass/utils/main.css" />
     <title>Document</title>
   </head>
   <body>
@@ -17,10 +17,58 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container">
-        <h1></h1>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img
+          id="modal-image"
+          src="./images/footer.png"
+          alt="Modal Image"
+          class="modal-img"
+        />
+        <div class="team-members">
+          <h2>Nuestro grupo de trabajo:</h2>
+          <ul>
+            <li>Claudia Chauta</li>
+            <li>Javier Vargas</li>
+            <li>Jorge Lizcano</li>
+            <li>Luis Chaves</li>
+            <li>Luis Nava</li>
+            <li>Santiago Hincapie</li>
+            <li>Saul Santana</li>
+            <li>Valeria</li>
+            <li>Juan Montenegro</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="container container_footer">
+        <ul class="footer-list">
+          <li>© 2020 | All Rights Reserved |</li>
+          <li>
+            Developed with
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+            >
+              <path
+                d="M7 13.188L6.02 12.2177C2.38 9.02961 0 6.88109 0 4.24743C0 2.09891 1.68 0.435547 3.85 0.435547C5.04 0.435547 6.23 0.990002 7 1.89099C7.77 0.990002 8.96 0.435547 10.15 0.435547C12.32 0.435547 14 2.09891 14 4.24743C14 6.88109 11.62 9.02961 7.98 12.2177L7 13.188Z"
+                fill="#FF6B08"
+              />
+            </svg>
+            by GoIT Students
+          </li>
+        </ul>
       </div>
     </footer>
+    <script src="./js/footer-modal.js"></script>
+    <script src="./js/card.js"></script>
+    
   </body>
 </html>
