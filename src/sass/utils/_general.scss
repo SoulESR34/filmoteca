@@ -7,13 +7,19 @@
 }
 
 body {
-  font-family: Roboto;
+  font-family: $main-font;
+  font-weight: $medium-weight;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -23,6 +29,7 @@ ul {
   max-width: 480px;
 }
 
+// Se creo otro container selectivo para la seccion de las peliculas.
 .container-movies {
   min-width: 320px;
   max-width: 1024px;
