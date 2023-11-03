@@ -450,6 +450,32 @@ footer {
     height: 398px;
   }
 }
+.movie__list p {
+  text-align: center;
+}
+
+.movie__list button {
+  background: #FF6B08;
+  color: white;
+  border: 1px solid white;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.movie__list button:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid #FF6B08;
+}
+
+.movie__item:hover {
+  cursor: pointer;
+}
+
 .hero__place {
   background-image: url("/src/img/headerbackground.jpg");
   background-size: cover;
@@ -460,36 +486,62 @@ footer {
   height: 230px;
   width: 100%;
 }
-.hero__place .hero__btn--home,
-.hero__place .hero__btn--libraryV1 {
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: 0em;
-  background-color: transparent;
+.hero__place .hero__btn--home {
+  color: white;
+  background: transparent;
   border: none;
-  cursor: pointer;
-  color: #ffffff;
+  transition: background 0.3s;
 }
-.hero__place .hero__btn--home::after {
-  content: "";
-  display: block;
-  border-bottom: 3px solid #FF6B08;
-  width: 34px;
+.hero__place .hero__btn--libraryV1 {
+  color: white;
+  background: transparent;
+  border: none;
+  transition: background 0.3s;
+}
+.hero__place .hero__btn--home:hover,
+.hero__place .hero__btn--libraryV1:hover {
+  background: transparent;
+  border: none;
 }
 .hero__place .hero__SMovies {
   width: 336px;
   height: 20px;
-  border-bottom: 0.5px solid #FFFFFF;
   display: flex;
   justify-content: center;
   margin: 37px auto 0px auto;
+}
+.hero__place .hero__SMovies-button:hover {
+  cursor: pointer;
 }
 .hero__place .hero__SMovies--bar {
   width: 336px;
   display: flex;
   justify-content: space-between;
+}
+.hero__place .btn__add {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.hero__place #watchedButton {
+  background: #FF6B08;
+  color: white;
+  border: 1px solid white;
+  transition: background 0.3s, color 0.3s;
+}
+.hero__place #watchedButton:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid #FF6B08;
+}
+.hero__place #queueButton {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
+.hero__place #queueButton:hover {
+  background: white;
+  color: black;
+  border: 1px solid white;
 }
 .hero__place #busqueda {
   background-color: transparent;
@@ -555,13 +607,15 @@ footer {
   cursor: pointer;
   transition: background-color 1s, border-color 1s;
 }
-.hero__placeV2 .hero__btn--WT:hover, .hero__placeV2 .hero__btn--QU:hover {
+.hero__placeV2 .hero__btn--WT:hover,
+.hero__placeV2 .hero__btn--QU:hover {
   background-color: #FF6B01;
   border-color: #FF6B01;
   color: black;
   box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2);
 }
-.hero__placeV2 .hero__btn--WT:active, .hero__placeV2 .hero__btn--QU:active {
+.hero__placeV2 .hero__btn--WT:active,
+.hero__placeV2 .hero__btn--QU:active {
   background-color: #FF6B01;
   border-color: #FF6B01;
   color: black;
@@ -667,4 +721,122 @@ img {
     padding-left: 75px;
     padding-right: 75px;
   }
+}
+.hero__movies-watched-queue-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__movies-watched-queue-container button:hover {
+  cursor: pointer;
+}
+
+.hero__btn--home {
+  text-decoration: none;
+}
+
+#libraryButton {
+  text-decoration: underline;
+  background-color: white;
+  color: black;
+}
+
+#libraryButton.active {
+  text-decoration: none;
+}
+
+#libraryButton.active ~ .hero__btn--home {
+  text-decoration: underline;
+}
+
+.hero__btn--home.active {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.search-form input {
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+.search-form button {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pagination-button {
+  background-color: white;
+  border: 0px;
+  color: black;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: orange;
+  color: white;
+  border: 1px solid black;
+}
+
+.erase-local-storage-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.btn__erase-lists {
+  background-color: orange;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn__erase-lists:hover {
+  background-color: white;
+  color: orange;
+  text-decoration: none;
+}
+
+.movie__list p {
+  text-align: center;
+}
+
+.movie__list button {
+  background: #FF6B08;
+  color: white;
+  border: 1px solid white;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 8px;
+}
+
+.movie__list button:hover {
+  background: transparent;
+  color: black;
+  border: 1px solid black;
 }/*# sourceMappingURL=main.css.map */

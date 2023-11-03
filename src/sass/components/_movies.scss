@@ -86,3 +86,29 @@
         }
     }
 }
+
+.movie__list p {
+    text-align: center;
+}
+
+.movie__list button {
+    background: #FF6B08;
+    color: white;
+    border: 1px solid white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.movie__list button:hover {
+    background: transparent;
+    color: white;
+    border: 1px solid #FF6B08;
+}
+
+.movie__item:hover {
+    cursor: pointer;
+}

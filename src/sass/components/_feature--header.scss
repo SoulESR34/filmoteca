@@ -5,42 +5,75 @@
     background-repeat: no-repeat;
     line-height: 35px;
     padding: 41px 71px 0px 71px;
-    height: 230px; 
+    height: 230px;
     width: 100%;
 
-    .hero__btn--home,
-    .hero__btn--libraryV1 {
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 0em;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #ffffff;
+    .hero__btn--home {
+        color: white;
+        background: transparent;
+        border: none;
+        transition: background 0.3s;
     }
 
-    .hero__btn--home::after{
-        content: "";
-        display: block;
-        border-bottom: 3px solid #FF6B08;
-        width: 34px;
+    .hero__btn--libraryV1 {
+        color: white;
+        background: transparent;
+        border: none;
+        transition: background 0.3s;
+    }
+
+    .hero__btn--home:hover,
+    .hero__btn--libraryV1:hover {
+        background: transparent;
+        border: none;
     }
 
     .hero__SMovies {
         width: 336px;
         height: 20px;
-        border-bottom: 0.5px solid #FFFFFF;
         display: flex;
         justify-content: center;
         margin: 37px auto 0px auto;
+    }
+
+    .hero__SMovies-button:hover {
+        cursor: pointer;
     }
 
     .hero__SMovies--bar {
         width: 336px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .btn__add {
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+
+    #watchedButton {
+        background: #FF6B08;
+        color: white;
+        border: 1px solid white;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    #watchedButton:hover {
+        background: transparent;
+        color: white;
+        border: 1px solid #FF6B08;
+    }
+
+    #queueButton {
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    #queueButton:hover {
+        background: white;
+        color: black;
+        border: 1px solid white;
     }
 
     #busqueda {
@@ -59,8 +92,8 @@
 
     #busqueda:hover,
     #busqueda:focus {
-    border: none;
-    outline: none;
+        border: none;
+        outline: none;
     }
 
     #busqueda::placeholder {
@@ -73,6 +106,7 @@
         cursor: pointer;
     }
 }
+
 /* --------------------PAGE 2 ---------------------- */
 .hero__placeV2 {
     background-image: url('../img/headerbackground2.jpg');
@@ -81,17 +115,17 @@
     background-repeat: no-repeat;
     line-height: 35px;
     padding: 41px 71px 0px 71px;
-    height: 230px; 
+    height: 230px;
     width: 100%;
 
-    .hero__btn--containerV2{
+    .hero__btn--containerV2 {
         display: flex;
         justify-content: space-between;
         width: 287px;
         margin: 45px auto 0px auto;
     }
 
-    .hero__btn--WT, 
+    .hero__btn--WT,
     .hero__btn--QU {
 
         width: 136px;
@@ -105,43 +139,45 @@
         color: #FFFFFF;
         background-color: transparent;
         border: 2px solid white;
-        border-radius: 8px; 
+        border-radius: 8px;
         padding: 10px 20px;
         cursor: pointer;
         transition: background-color 1s, border-color 1s;
     }
-    
-    .hero__btn--WT:hover, .hero__btn--QU:hover {
-        background-color: #FF6B01; 
+
+    .hero__btn--WT:hover,
+    .hero__btn--QU:hover {
+        background-color: #FF6B01;
         border-color: #FF6B01;
         color: black;
-        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2); 
-    }   
-    
-    .hero__btn--WT:active, .hero__btn--QU:active {
-        background-color: #FF6B01; 
+        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2);
+    }
+
+    .hero__btn--WT:active,
+    .hero__btn--QU:active {
+        background-color: #FF6B01;
         border-color: #FF6B01;
         color: black;
-        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2); 
-    }   
+        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2);
+    }
 
     .hero__btn--home,
     .hero__btn--library {
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 0em;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: #ffffff;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #ffffff;
     }
 
-    .hero__btn--library::after{
-    content: "";
-    display: block;
-    border-bottom: 3px solid #FF6B08;
-    width: 50px;
+    .hero__btn--library::after {
+        content: "";
+        display: block;
+        border-bottom: 3px solid #FF6B08;
+        width: 50px;
     }
 }

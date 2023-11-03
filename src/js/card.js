@@ -107,9 +107,9 @@ function getMovie(movieId) {
         if (!queueAlready) {
           queue.push(movieData);
           localStorage.setItem("queue", JSON.stringify(queue));
-          alert("Added");
+          alert("Movie was added to your Queue");
         } else {
-          alert("Already added");
+          return null;
         }
       });
 
@@ -121,9 +121,8 @@ function getMovie(movieId) {
         if (!watcehdAlready) {
           watcehd.push(movieData);
           localStorage.setItem("watched", JSON.stringify(watcehd));
-          alert("Added");
         } else {
-          alert("Already added");
+          return null
         }
       });
 

@@ -15,7 +15,6 @@
 <body>
   <header>
     <div class="header-container">
-      <!-- form de prueba para verificar resultado de search.js - Eliminar al mezclar con rama feature-header -->
       <section class="hero__place">
         <nav class="hero__Menu">
           <div class="hero__container">
@@ -27,11 +26,11 @@
                 <a href="./index.html">Filmoteka</a>
               </li>
               <li class="hero__btn--container">
-                <button class="hero__btn--home">
+                <button class="hero__btn--home" id="homeButton">
                   HOME
                 </button>
-                <button class="hero__btn--libraryV1">
-                  <a class="library--link" href="./queue.html">LIBRARY</a>
+                <button class="hero__btn--libraryV1" id="libraryButton">
+                  MY LIBRARY
                 </button>
               </li>
             </ul>
@@ -39,20 +38,20 @@
           <div class="hero__Smovies--container">
             <ul>
               <li class="hero__SMovies">
-                <!-- <form class="hero__SMovies--bar" action="" method="get">
-                  <input type="search" id="busqueda" autocomplete="off" placeholder="What do you want to see?" required>
-                  <button type="submit" class="hero__SMovies--SVG">
-                    <svg class="search__icon" style="width: 20px; height: 20px;">
-                      <use href="./img/sprite.svg#SearchSymbol"></use>
-                    </svg>
-                  </button>
-                </form> -->
                 <form action="" class="search-form">
                   <input type="text" name="search" />
-                  <button type="submit">lupa</button>
+                  <button type="submit" class="hero__SMovies-button">&#128269;</button>
                 </form>
               </li>
             </ul>
+          </div>
+          <div class="hero__movies-watched-queue-container">
+            <button class="btn__add btn__add--watched" id="watchedButton" type="button" data-add-watched data-modal-card-close>
+              WATCHED
+            </button>
+            <button class="btn__add btn__add--queue" id="queueButton" type="button" data-add-queue data-modal-card-close>
+              QUEUE
+            </button>
           </div>
         </nav>
       </section>
@@ -60,7 +59,6 @@
   </header>
   <main>
     <section class="queue-films">
-      <!-- Container para Peliculas -->
       <div class="container-movies movie">
         <ul class="movie__list"></ul>
         <div class="pagination"></div>
@@ -94,7 +92,15 @@
       </div>
     </div>
   </div>
-
+  <div class="pagination">
+    <button id="prevPage" class="pagination-button">&#9668;</button>
+    <button id="nextPage" class="pagination-button">&#9658;</button>
+  </div>
+  <div class="erase-local-storage-container">
+    <button class="btn__erase-lists" id="eraseListsButton">
+      Erase My Lists
+    </button>
+  </div>
   <footer id="footer">
     <div class="container container_footer">
       <ul class="footer-list">
