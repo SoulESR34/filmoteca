@@ -22,3 +22,19 @@ ul {
   padding: 0 20px;
   max-width: 480px;
 }
+
+.container-movies {
+  min-width: 320px;
+  max-width: 1024px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-movies {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}

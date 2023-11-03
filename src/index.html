@@ -1,80 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./sass/utils/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
     <link rel="stylesheet" href="./sass/utils/main.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div class="container"></div>
-    </header>
-    <main>
-      <section class="queue-films">
-        <div class="container">
-          <div class="pagination"></div>
-        </div>
-      </section>
-      <section class="card is-hidden" data-modal-card data-modal-card-close>
-        <div class="card__layout is-hidden">
-          <div class="card__image" id="moviePoster"></div>
-          <div class="card__insert"></div>
-        </div>
-      </section>
-    </main>
+  <title>Document</title>
+</head>
 
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <img
-          id="modal-image"
-          src="./images/footer.png"
-          alt="Modal Image"
-          class="modal-img"
-        />
-        <div class="team-members">
-          <h2>Nuestro grupo de trabajo:</h2>
-          <ul>
-            <li>Claudia Chauta</li>
-            <li>Javier Vargas</li>
-            <li>Jorge Lizcano</li>
-            <li>Luis Chaves</li>
-            <li>Luis Nava</li>
-            <li>Santiago Hincapie</li>
-            <li>Saul Santana</li>
-            <li>Valeria</li>
-            <li>Juan Montenegro</li>
-          </ul>
-        </div>
-      </div>
+<body>
+  <header>
+    <div class="container">
+      <!-- form de prueba para verificar resultado de search.js - Eliminar al mezclar con rama feature-header -->
+      <form action="" class="search-form">
+        <input type="text" name="search" />
+        <button type="submit">lupa</button>
+      </form>
     </div>
+  </header>
+  <main>
+    <section class="queue-films">
+      <!-- Container para Peliculas -->
+      <div class="container-movies movie">
+        <ul class="movie__list"></ul>
 
-    <footer id="footer">
-      <div class="container container_footer">
-        <ul class="footer-list">
-          <li>© 2020 | All Rights Reserved |</li>
-          <li>
-            Developed with
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-            >
-              <path
-                d="M7 13.188L6.02 12.2177C2.38 9.02961 0 6.88109 0 4.24743C0 2.09891 1.68 0.435547 3.85 0.435547C5.04 0.435547 6.23 0.990002 7 1.89099C7.77 0.990002 8.96 0.435547 10.15 0.435547C12.32 0.435547 14 2.09891 14 4.24743C14 6.88109 11.62 9.02961 7.98 12.2177L7 13.188Z"
-                fill="#FF6B08"
-              />
-            </svg>
-            by GoIT Students
-          </li>
+        <div class="pagination"></div>
+      </div>
+    </section>
+    <section class="card is-hidden" data-modal-card data-modal-card-close>
+      <div class="card__layout is-hidden">
+        <div class="card__image" id="moviePoster"></div>
+        <div class="card__insert"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-image" src="./images/footer.png" alt="Modal Image" class="modal-img" />
+      <div class="team-members">
+        <h2>Nuestro grupo de trabajo:</h2>
+        <ul>
+          <li>Claudia Chauta</li>
+          <li>Javier Vargas</li>
+          <li>Jorge Lizcano</li>
+          <li>Luis Chaves</li>
+          <li>Luis Nava</li>
+          <li>Santiago Hincapie</li>
+          <li>Saul Santana</li>
+          <li>Valeria</li>
+          <li>Juan Montenegro</li>
         </ul>
       </div>
-    </footer>
-    <script src="./js/footer-modal.js"></script>
-    <script src="./js/card.js"></script>
-    
-  </body>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="container container_footer">
+      <ul class="footer-list">
+        <li>© 2020 | All Rights Reserved |</li>
+        <li>
+          Developed with
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path
+              d="M7 13.188L6.02 12.2177C2.38 9.02961 0 6.88109 0 4.24743C0 2.09891 1.68 0.435547 3.85 0.435547C5.04 0.435547 6.23 0.990002 7 1.89099C7.77 0.990002 8.96 0.435547 10.15 0.435547C12.32 0.435547 14 2.09891 14 4.24743C14 6.88109 11.62 9.02961 7.98 12.2177L7 13.188Z"
+              fill="#FF6B08" />
+          </svg>
+          by GoIT Students
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./js/footer-modal.js" defer></script>
+  <script src="./js/card.js" defer></script>
+  <script src="./js/gallery.js" defer></script>
+  <script type="module" src="./js/film.js" defer></script>
+  <script type="module" src="./js/index.js" ></script>
+</body>
+
 </html>
