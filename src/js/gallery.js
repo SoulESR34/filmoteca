@@ -38,6 +38,7 @@ function renderMovies(movieArray, genreArray) {
         }
       }
 
+      // Manejo de póster nulo
       const posterUrl = poster_path
         ? urlImg + poster_path
         : placeholderImageBase64;
