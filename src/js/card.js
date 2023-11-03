@@ -137,22 +137,20 @@ function getMovie(movieId) {
     .catch((err) => console.error(err));
 }
 
-let dynamicDomExecuted = false;
-
 function dynamicDom() {
-  if (!dynamicDomExecuted) {
-    const openBtns = document.querySelectorAll("[data-id]");
-    openBtns.forEach(function (openBtn) {
-      openBtn.addEventListener("click", function (event) {
-        let movieId = openBtn.getAttribute("data-id");
-        getMovie(movieId);
-        setTimeout(function () {
-          modalCard.classList.remove("is-hidden");
-        }, 500);
-      });
-    });
-    dynamicDomExecuted = true;
-  }
+  const openBtns = document.querySelectorAll("[data-id]");
+  openBtns.forEach(function (openBtn) {
+    openBtn.removeEventListener("click", openBtnClickHandler);
+    openBtn.addEventListener("click", openBtnClickHandler); 
+  });
+}
+
+function openBtnClickHandler(event) {
+  let movieId = event.currentTarget.getAttribute("data-id");
+  getMovie(movieId);
+  setTimeout(function () {
+    modalCard.classList.remove("is-hidden");
+  }, 500);
 }
 
 const observer = new MutationObserver(dynamicDom);
