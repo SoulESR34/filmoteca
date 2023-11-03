@@ -7,13 +7,20 @@
 }
 
 body {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-image: url(../src/img/pat.png);
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
