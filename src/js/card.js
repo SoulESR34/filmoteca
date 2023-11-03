@@ -1,3 +1,4 @@
+
 const modalCard = document.querySelector("[data-modal-card]");
 const cardData = document.querySelector("div.card__insert");
 const cardImage = document.getElementById("moviePoster");
@@ -20,7 +21,11 @@ function getMovie(movieId) {
       const movieData = data;
 
       const baseImageUrl = "https://image.tmdb.org/t/p/w500";
-      const posterImageUrl = `${baseImageUrl}${movieData.poster_path}`;
+
+      let posterImageUrl = `${baseImageUrl}${movieData.poster_path}`;
+      if (movieData.poster_path === null) {
+        posterImageUrl = "https://acquiredassets.ph/assets/img/no-photo.png";
+      }
 
       const imgHTML = `<img
                 class="card__image--png"
@@ -55,7 +60,7 @@ function getMovie(movieId) {
             </td>
           </tr>
           <tr>
-            <td class="movie__title card__characteristics--title">
+            <td class="card__characteristics--title">
               Original Title
             </td>
             <td
@@ -141,7 +146,7 @@ function dynamicDom() {
   const openBtns = document.querySelectorAll("[data-id]");
   openBtns.forEach(function (openBtn) {
     openBtn.removeEventListener("click", openBtnClickHandler);
-    openBtn.addEventListener("click", openBtnClickHandler); 
+    openBtn.addEventListener("click", openBtnClickHandler);
   });
 }
 
