@@ -1,0 +1,34 @@
+.hero__btn--container{
+    width: 143px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+.hero__Film{
+    display: flex;
+}
+
+.hero__Search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__Film a{
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    color: #ffffff;
+    line-height: 35.16px;
+}
+
+.hero__logo--film{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
