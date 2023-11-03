@@ -7,7 +7,9 @@
 }
 
 body {
-  font-family: Roboto;
+  font-family: $main-font;
+  font-weight: $medium-weight;
+  background-image: url(../src/img/pat.png);
 }
 
 ul {
@@ -16,9 +18,31 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
   max-width: 480px;
+}
+
+// Se creo otro container selectivo para la seccion de las peliculas.
+.container-movies {
+  min-width: 320px;
+  max-width: 1024px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container-movies {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
 }
