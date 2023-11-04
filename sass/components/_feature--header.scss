@@ -1,3 +1,5 @@
+/* --------------------PAGE 1  ---------------------- */
+
 .hero__place {
     background-image: url(../img/headerbackground.jpg);
     background-size: cover;
@@ -110,3 +112,118 @@
 }
 
 /* --------------------PAGE 2 ---------------------- */
+
+.hero__placeV2 {
+    display: none;
+}
+
+.hero__placeV2 {
+    background-image: url('../img/headerbackground2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 35px;
+    padding: 41px 71px 0px 71px;
+    height: 230px; 
+    width: 100%; 
+
+    .hero__Search{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero__Film{
+        display: flex;
+    }
+
+    .hero__Film a{
+        font-family: Roboto;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 0em;
+        color: #ffffff;
+        line-height: 35.16px;
+    }
+
+    .hero__logo--film{
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .hero__btn--container{
+        width: 143px;
+        height: 14px;
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+
+    button p{
+        color: #FFFFFF;
+    }
+
+    .hero__btn--home,
+    .hero__btn--library {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    }
+
+    .hero__btn--library::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid #FF6B08;
+        width: 50px;
+    }
+
+    .hero__btn--containerV2{
+        display: flex;
+        justify-content: space-between;
+        width: 287px;
+        margin: 45px auto 0px auto;
+    }
+
+    .hero__btn--WT, 
+    .hero__btn--QU {
+
+        width: 136px;
+        height: 44px;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 8px; 
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 1s, border-color 1s;
+    }
+    
+    .hero__btn--WT:hover, .hero__btn--QU:hover {
+        background-color: #FF6B01; 
+        border-color: #FF6B01;
+        color: black;
+        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2); 
+    }   
+    
+    .hero__btn--WT:active, .hero__btn--QU:active {
+        background-color: #FF6B01; 
+        border-color: #FF6B01;
+        color: black;
+        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2); 
+    }
+}
