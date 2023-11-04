@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,54 +7,49 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/main.min.css"/>
   <title>Filmoteka</title>
 </head>
 
 <body>
   <header>
-    <div class="header-container">
-      <section class="hero__place">
-        <nav class="hero__Menu">
-          <div class="hero__container">
-            <ul class="hero__Search">
-              <li class="hero__Film">
-                <svg class="hero__logo--film">
+    <section class="hero__place">
+      <nav class="hero__Menu">
+        <div class="hero__container">
+          <ul class="hero__Search">
+            <li class="hero__Film">
+              <svg class="hero__logo--film">
                   <use href="./img/film (3).svg#film"></use>
-                </svg>
-                <a href="./index.html">Filmoteka</a>
-              </li>
-              <li class="hero__btn--container">
-                <button class="hero__btn--home" id="homeButton">
+              </svg>
+              <a href="./index.html">Filmoteka</a>
+            </li>
+            <li class="hero__btn--container">
+              <button class="hero__btn--home" id="homeButton">
                   HOME
-                </button>
-                <button class="hero__btn--libraryV1" id="libraryButton">
-                  MY LIBRARY
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div class="hero__Smovies--container">
-            <ul>
-              <li class="hero__SMovies">
-                <form action="" class="search-form">
-                  <input type="text" name="search" />
-                  <button type="submit" class="hero__SMovies-button">&#128269;</button>
-                </form>
-              </li>
-            </ul>
-          </div>
-          <div class="hero__movies-watched-queue-container">
-            <button class="btn__add btn__add--watched" id="watchedButton" type="button" data-add-watched data-modal-card-close>
-              WATCHED
-            </button>
-            <button class="btn__add btn__add--queue" id="queueButton" type="button" data-add-queue data-modal-card-close>
-              QUEUE
-            </button>
-          </div>
-        </nav>
-      </section>
-    </div>
+              </button>
+              <button class="hero__btn--libraryV1">
+                LIBRARY
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__Smovies--container">
+          <ul>
+            <li class="hero__SMovies">
+              <form class="hero__SMovies--bar" action="" method="get">
+                  <input type="search" id="busqueda" autocomplete="off" placeholder="What do you want to see?" required>
+                  <button type="submit" class="hero__SMovies--SVG">
+                      <svg class="search__icon" style="width: 20px; height: 20px;">
+                          <use href="./img/sprite.svg#SearchSymbol"></use>
+                      </svg>
+                  </button>
+              </form>
+          </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
   </header>
   <main>
     <section class="queue-films">

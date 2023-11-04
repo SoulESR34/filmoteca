@@ -8,72 +8,74 @@
     height: 230px;
     width: 100%;
 
-    .hero__btn--home {
-        color: white;
-        background: transparent;
-        border: none;
-        transition: background 0.3s;
+    .hero__Search{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
+    .hero__Film{
+        display: flex;
+    }
+
+    .hero__logo--film{
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+
+    .hero__Film a{
+        font-family: Roboto;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 0em;
+        color: #ffffff;
+        line-height: 35.16px;
+    }
+
+    .hero__btn--container{
+        width: 143px;
+        height: 14px;
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+
+    .hero__btn--home,
     .hero__btn--libraryV1 {
-        color: white;
-        background: transparent;
-        border: none;
-        transition: background 0.3s;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
     }
 
-    .hero__btn--home:hover,
-    .hero__btn--libraryV1:hover {
-        background: transparent;
-        border: none;
+    .hero__btn--home::after{
+        content: "";
+        display: block;
+        border-bottom: 3px solid #FF6B08;
+        width: 34px;
     }
 
     .hero__SMovies {
         width: 336px;
         height: 20px;
+        border-bottom: 0.5px solid #FFFFFF;
         display: flex;
         justify-content: center;
         margin: 37px auto 0px auto;
-    }
-
-    .hero__SMovies-button:hover {
-        cursor: pointer;
     }
 
     .hero__SMovies--bar {
         width: 336px;
         display: flex;
         justify-content: space-between;
-    }
-
-    .btn__add {
-        transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    }
-
-    #watchedButton {
-        background: #FF6B08;
-        color: white;
-        border: 1px solid white;
-        transition: background 0.3s, color 0.3s;
-    }
-
-    #watchedButton:hover {
-        background: transparent;
-        color: white;
-        border: 1px solid #FF6B08;
-    }
-
-    #queueButton {
-        background: transparent;
-        border: 1px solid white;
-        color: white;
-        transition: background 0.3s, color 0.3s;
-    }
-
-    #queueButton:hover {
-        background: white;
-        color: black;
-        border: 1px solid white;
     }
 
     #busqueda {
@@ -92,8 +94,8 @@
 
     #busqueda:hover,
     #busqueda:focus {
-        border: none;
-        outline: none;
+    border: none;
+    outline: none;
     }
 
     #busqueda::placeholder {
@@ -108,76 +110,3 @@
 }
 
 /* --------------------PAGE 2 ---------------------- */
-.hero__placeV2 {
-    background-image: url(../img/headerbackground2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    line-height: 35px;
-    padding: 41px 71px 0px 71px;
-    height: 230px;
-    width: 100%;
-
-    .hero__btn--containerV2 {
-        display: flex;
-        justify-content: space-between;
-        width: 287px;
-        margin: 45px auto 0px auto;
-    }
-
-    .hero__btn--WT,
-    .hero__btn--QU {
-
-        width: 136px;
-        height: 44px;
-        font-family: Roboto;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 16px;
-        letter-spacing: 0em;
-        text-align: center;
-        color: #FFFFFF;
-        background-color: transparent;
-        border: 2px solid white;
-        border-radius: 8px;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: background-color 1s, border-color 1s;
-    }
-
-    .hero__btn--WT:hover,
-    .hero__btn--QU:hover {
-        background-color: #FF6B01;
-        border-color: #FF6B01;
-        color: black;
-        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2);
-    }
-
-    .hero__btn--WT:active,
-    .hero__btn--QU:active {
-        background-color: #FF6B01;
-        border-color: #FF6B01;
-        color: black;
-        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2);
-    }
-
-    .hero__btn--home,
-    .hero__btn--library {
-        font-family: Roboto;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 14px;
-        letter-spacing: 0em;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        color: #ffffff;
-    }
-
-    .hero__btn--library::after {
-        content: "";
-        display: block;
-        border-bottom: 3px solid #FF6B08;
-        width: 50px;
-    }
-}

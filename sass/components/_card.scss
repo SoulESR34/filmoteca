@@ -97,7 +97,16 @@ max-width: 400px;
     padding-top: 20px;
   }
 
+  .container-movies {
+    min-width: 320px;
+    max-width: 1024px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
 .btn__add {
   align-items: center;
   background-color: rgba(255, 255, 255, 1);
@@ -229,5 +238,12 @@ max-width: 400px;
       width: 112px;
       margin: 20px 5px 0px 5px;
     }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container-movies {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }

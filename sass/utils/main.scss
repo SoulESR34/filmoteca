@@ -1,44 +1,33 @@
 @import './variables';
-@import './general';
 @import './mixins';
-@import './variables';
 @import "../components/footer";
 @import '../components/card';
 @import '../components/movies';
 @import "../components/feature--header";
-@import "../components/feature--hero";
-
 
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
   align-items: center;
   box-sizing: content-box;
-  color: var(--black-color1);
-  font-family: Roboto, sans-serif;
+  color: $main-text-color;
+  font-family: $main-font;
   font-size: 16px;
   vertical-align: middle;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
+  background-image: url(/img/pat.png);
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
-  max-width: 480px;
+  max-width: 1300px; 
 }
 
 // Se creo otro container selectivo para la seccion de las peliculas.
