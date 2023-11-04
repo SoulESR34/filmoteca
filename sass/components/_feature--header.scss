@@ -193,9 +193,7 @@
         margin: 45px auto 0px auto;
     }
 
-    .hero__btn--WT, 
-    .hero__btn--QU {
-
+    .btn__add{
         width: 136px;
         height: 44px;
         font-family: Roboto;
@@ -210,20 +208,13 @@
         border-radius: 8px; 
         padding: 10px 20px;
         cursor: pointer;
-        transition: background-color 1s, border-color 1s;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     }
     
-    .hero__btn--WT:hover, .hero__btn--QU:hover {
+    .btn__add:focus,
+    .btn__add:hover {
         background-color: #FF6B01; 
         border-color: #FF6B01;
-        color: black;
-        box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2); 
-    }   
-    
-    .hero__btn--WT:active, .hero__btn--QU:active {
-        background-color: #FF6B01; 
-        border-color: #FF6B01;
-        color: black;
         box-shadow: 0 0 10px 10px rgba(255, 107, 1, 0.2); 
     }
 }

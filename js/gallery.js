@@ -132,7 +132,7 @@ eraseListsButton.addEventListener('click', () => {
   alert('Your lists have been erased.');
 });
 
-document.getElementById('libraryButton').addEventListener('click', () => {
+document.getElementById('libraryButtonV1').addEventListener('click', () => {
   displayWatchedMovies();
 });
 
