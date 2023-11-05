@@ -1,9 +1,12 @@
 .movie {
     &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fill,
+            minmax(270px, 3fr)
+        );
         gap: 20px;
+        justify-content: center;
         padding-top: 20px;
         padding-bottom: 40px;
     }
@@ -71,9 +74,6 @@
 
 @media only screen and (min-width: 1024px) {
     .movie {
-        &__list {
-            justify-content: left;
-        }
 
         &__item {
             width: 274px;
@@ -87,9 +87,7 @@
     }
 }
 
-.movie__list p {
-    text-align: center;
-}
+
 
 .movie__list button {
     background: #FF6B08;
