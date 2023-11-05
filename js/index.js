@@ -1,8 +1,15 @@
 import { galleryFilms, renderMovies } from './gallery.js';
 import { searchFilms } from './search.js'
 
-searchFilms();
 galleryFilms();
+const searchform = document.querySelector(".search-form");
+searchform.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const form = e.target;
+  console.log(form)
+  const movieName = form.elements.busqueda.value;
+  searchFilms(movieName);
+});
 
 const libraryButton = document.getElementById('libraryButton');
 libraryButton.addEventListener('click', () => {
@@ -13,3 +20,4 @@ libraryButton.addEventListener('click', () => {
 
   libraryButton.classList.add('active');
 });
+
