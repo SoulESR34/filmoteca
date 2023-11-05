@@ -6,7 +6,7 @@
             minmax(270px, 3fr)
         );
         gap: 20px;
-        justify-content: center;
+        justify-items: center;
         padding-top: 20px;
         padding-bottom: 40px;
     }
@@ -53,9 +53,6 @@
 @media only screen and (min-width: 768px) {
     .movie {
         &__list {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
             gap: 30px;
             padding-top: 60px;
             padding-bottom: 50px;
