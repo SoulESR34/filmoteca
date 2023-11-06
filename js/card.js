@@ -1,4 +1,3 @@
-
 const modalCard = document.querySelector("[data-modal-card]");
 const cardData = document.querySelector("div.card__insert");
 const cardImage = document.getElementById("moviePoster");
@@ -100,7 +99,6 @@ function getMovie(movieId) {
 
       const addQueue = document.querySelector("[data-movie-add-queue]");
       const addWatched = document.querySelector("[data-movie-add-watched]");
-      console.log(addWatched);
 
       addQueue.addEventListener("click", function (event) {
         const queue = JSON.parse(localStorage.getItem("queue")) || [];
@@ -138,7 +136,6 @@ function getMovie(movieId) {
           }, 100);
         });
       });
-
     })
 
     .catch((err) => console.error(err));
