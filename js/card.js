@@ -83,10 +83,10 @@ function getMovie(movieId) {
               <p class="card__about" id="movieOverview">
                 ${movieData.overview ? movieData.overview : "N/A"}
               </p>
-              <button class="btn__add btn__add--watcehd" type="button" data-add-watched data-modal-card-close>
+              <button class="btn__add btn__add--watcehd" type="button" data-movie-add-watched data-modal-card-close>
                 ADD TO WATCHED
               </button>
-              <button class="btn__add btn__add--queue" type="button" data-add-queue data-modal-card-close>
+              <button class="btn__add btn__add--queue" type="button" data-movie-add-queue data-modal-card-close>
                 ADD TO QUEUE
               </button>
 
@@ -98,8 +98,9 @@ function getMovie(movieId) {
 
       cardData.insertAdjacentHTML("afterBegin", imgHTML1);
 
-      const addQueue = document.querySelector("[data-add-queue]");
-      const addWatched = document.querySelector("[data-add-watched]");
+      const addQueue = document.querySelector("[data-movie-add-queue]");
+      const addWatched = document.querySelector("[data-movie-add-watched]");
+      console.log(addWatched);
 
       addQueue.addEventListener("click", function (event) {
         const queue = JSON.parse(localStorage.getItem("queue")) || [];
@@ -107,9 +108,9 @@ function getMovie(movieId) {
         if (!queueAlready) {
           queue.push(movieData);
           localStorage.setItem("queue", JSON.stringify(queue));
-          alert("Movie was added to your Queue");
+          alert("Added");
         } else {
-          return null;
+          alert("Already added");
         }
       });
 
@@ -121,8 +122,9 @@ function getMovie(movieId) {
         if (!watcehdAlready) {
           watcehd.push(movieData);
           localStorage.setItem("watched", JSON.stringify(watcehd));
+          alert("Added");
         } else {
-          return null
+          alert("Already added");
         }
       });
 
@@ -136,6 +138,7 @@ function getMovie(movieId) {
           }, 100);
         });
       });
+
     })
 
     .catch((err) => console.error(err));
