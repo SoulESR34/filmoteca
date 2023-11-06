@@ -4,6 +4,7 @@
 @import '../components/card';
 @import '../components/movies';
 @import "../components/feature--header";
+@import "../components/paginator";
 
 * {
   padding: 0px 0px;
@@ -95,31 +96,6 @@ body {
   background: transparent;
   border: none;
   color: white;
-}
-
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.pagination-button {
-  background-color: white;
-  border: 0px;
-  color: black;
-  padding: 5px 10px;
-  margin: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.pagination-button:hover {
-  background-color: orange;
-  color: white;
-  border: 1px solid black;
 }
 
 .erase-local-storage-container {

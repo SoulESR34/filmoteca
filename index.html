@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./css/main.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.min.css">
   <title>Filmoteka</title>
 </head>
-
 <body>
   <header>
     <section class="hero__place" id="homeSection">
@@ -19,13 +17,13 @@
           <ul class="hero__Search">
             <li class="hero__Film">
               <svg class="hero__logo--film">
-                  <use href="./img/film (3).svg#film"></use>
+                <use href="./img/film (3).svg#film"></use>
               </svg>
               <a href="./index.html">Filmoteka</a>
             </li>
             <li class="hero__btn--container">
               <button class="hero__btn--home">
-                  HOME
+                HOME
               </button>
               <button class="hero__btn--libraryV1" id="libraryButtonV1">
                 LIBRARY
@@ -33,24 +31,22 @@
             </li>
           </ul>
         </div>
-
         <div class="hero__Smovies--container">
           <ul>
             <li class="hero__SMovies">
               <form class="search-form   hero__SMovies--bar" action="" method="get">
-                  <input type="search" id="busqueda" autocomplete="off" placeholder="What do you want to see?" required>
-                  <button type="submit" class="hero__SMovies--SVG">
-                      <svg class="search__icon" style="width: 20px; height: 20px;">
-                          <use href="./img/sprite.svg#SearchSymbol"></use>
-                      </svg>
-                  </button>
+                <input type="search" id="busqueda" autocomplete="off" placeholder="What do you want to see?" required>
+                <button type="submit" class="hero__SMovies--SVG">
+                  <svg class="search__icon" style="width: 20px; height: 20px;">
+                    <use href="./img/sprite.svg#SearchSymbol"></use>
+                  </svg>
+                </button>
               </form>
-          </li>
+            </li>
           </ul>
         </div>
       </nav>
     </section>
-
     <section class="hero__placeV2" id="librarySection">
       <nav>
         <div>
@@ -63,21 +59,21 @@
             </li>
             <li class="hero__btn--container">
               <button class="hero__btn--home" id="homeButton">
-                  <p>HOME</p>
+                <p>HOME</p>
               </button>
               <button class="hero__btn--library">
-                  <p>LIBRARY</p>
+                <p>LIBRARY</p>
               </button>
-          </li>
+            </li>
           </ul>
           <div class="hero__btn--containerV2">
             <button class="btn__add btn__add--watched" id="watchedButton" type="button" data-add-watched data-modal-card-close>
-                WATCHED
+              WATCHED
             </button>
             <button class="btn__add btn__add--queue" id="queueButton" type="button" data-add-queue data-modal-card-close>
-                QUEUE
+              QUEUE
             </button>
-        </div>
+          </div>
         </div>
       </nav>
     </section>
@@ -95,9 +91,8 @@
         <div class="card__insert"></div>
       </div>
     </section>
-    </main>
-    
-    <div id="myModal" class="modal">
+  </main>
+  <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <img id="modal-image" src="./img/footer.png" alt="Modal Image" class="modal-img" />
@@ -116,17 +111,20 @@
         </ul>
       </div>
     </div>
+  </div>
+  <div class="pagination">
+    <button id="prevPage" class="pagination-button prev" id="arrow">&leftarrow;</button>
+    <div id="pageNumberContainer" class="pagination-numbers">
+      <!-- Page numbers will be added here dynamically -->
     </div>
-    <div class="pagination">
-    <button id="prevPage" class="pagination-button">&#9668;</button>
-    <button id="nextPage" class="pagination-button">&#9658;</button>
-    </div>
-    <div class="erase-local-storage-container">
+    <button id="nextPage" class="pagination-button next" id="arrow">&rightarrow;</button>
+  </div>
+  <div class="erase-local-storage-container">
     <button class="btn__erase-lists" id="eraseListsButton">
-      Erase My Lists
+      Erase all My Lists
     </button>
-    </div>
-    <footer id="footer">
+  </div>
+  <footer id="footer">
     <div class="container container_footer">
       <ul class="footer-list">
         <li>© 2020 | All Rights Reserved |</li>
@@ -141,13 +139,14 @@
         </li>
       </ul>
     </div>
-    </footer>
-    
-    <script src="./js/footer-modal.js" defer></script>
-    <script src="./js/card.js" defer></script>
-    <script src="./js/gallery.js" defer></script>
-    <script type="module" src="./js/film.js" defer></script>
-    <script type="module" src="./js/index.js"></script>
-    <script src="./js/header.js" defer></script>
+  </footer>
+  <script src="./js/footer-modal.js" defer></script>
+  <script src="./js/card.js" defer></script>
+  <script src="./js/gallery.js" defer></script>
+  <script type="module" src="./js/film.js" defer></script>
+  <script type="module" src="./js/index.js"></script>
+  <script type="module" src="./js/search.js" defer></script>
+  <script type="module" src="./js/paginator.js" defer></script>
+  <script src="./js/header.js" defer></script>
 </body>
 </html>
