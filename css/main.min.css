@@ -674,10 +674,10 @@ button.pagination-button:hover {
 
 .pagination-button.active {
   border-radius: 5px;
-  background-color: Orange;
+  background-color: orange;
   color: white;
   border: none;
-  padding: 10 5px;
+  padding: 10px 5px;
   text-decoration: none;
 }
 
@@ -685,6 +685,20 @@ button.pagination-button:hover {
   color: black;
 }
 
+@media (max-width: 600px) {
+  .pagination-button {
+    font-size: 14px;
+    padding: 6px;
+    margin: 4px;
+  }
+  #prevPage,
+  #nextPage {
+    padding: 6px 12px;
+  }
+  .pagination-numbers {
+    padding: 4px;
+  }
+}
 * {
   padding: 0px 0px;
   margin: 0px 0px;
